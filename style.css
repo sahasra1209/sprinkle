@@ -1,15 +1,114 @@
 body {
   font-family: 'Roboto', sans-serif; 
-  background-image: url("https://i.pinimg.com/originals/f3/61/40/f36140b3967c31155e8725b5163df2d5.jpg");
-  background-attachment: scroll;
-  background-position: center;
-  height: 100vh;
   margin: 0;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+              url("https://i.pinimg.com/originals/f3/61/40/f36140b3967c31155e8725b5163df2d5.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+
+
+.header {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+ 
+.travel-quote {
+  text-align: center;
+  font-size: 2.2em; /* Bigger quote */
+  font-weight: bold;
+  color: white; /* White color */
+  font-style: italic;
+  margin: 40px 0; /* Adds space above and below */
+  padding: 20px 0; /* Extra spacing */
+}
+
+/* Main container */
+.travel-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Increased spacing between cards */
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* Travel Card Styling */
+.travel-card {
+  width: 320px; /* Vertical rectangle */
+  height: 500px; /* Taller cards */
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Ensures content aligns properly */
+  margin: 35px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+.travel-card:hover {
+  transform: translateY(-10px); /* Moves card up slightly */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Increases shadow */
+}
+/* Image Styling */
+.travel-card img {
+  width: 100%; /* Full width */
+  height: 250px; /* Fixed height for uniformity */
+  object-fit: cover; /* Prevents distortion */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Travel details section */
+.travel-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+/* Title Styling */
+.travel-details h2 {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Paragraph & Price */
+.travel-details p {
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+/* Button Styling */
+.book-button {
+  margin-top: auto; /* Pushes button to bottom */
+  padding: 10px 15px;
+  background: #ff5a3c;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.book-button:hover {
+  background: #e0482f;
 }
 
 
 header h1 {
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.829);
   font-size: 200%;
   text-shadow: 0px 0px 5px black;
   text-align: left;
@@ -30,12 +129,11 @@ header h2 {
 nav {
   display: flex;
   justify-content: space-around;
-  padding: 10px 20px;
-  background-color: rgba(8, 8, 8, 0.31);
+  padding: 10px 10px;
+  background-color: rgba(8, 8, 8, 0.399);
   margin-top: 10px;
   border-radius: 15px;
 }
-
 nav a {
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -124,14 +222,13 @@ div h1 {
       transform: translateY(5px); 
   }
 }
-
- nav div p button{
+  nav div p button {
   width: 400px;
   height: 100px;
-  border-radius: 0px;
-  background-color:rgba(255, 255, 255, 0.474);
-  margin-left:20px;
-}
+  background-color:rgba(255, 255, 255, 0.722);
+  margin-left:0px;
+ }
+
 p{
   font-size: xx-large;
   color: antiquewhite;
@@ -176,10 +273,10 @@ div a{
   align-items: center;
   width: calc(33.33% - 13.33px);
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.619);
+  background-color: rgba(231, 219, 219, 0.619);
   border-radius: 8px;
   margin-bottom: 20px; 
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(35, 35, 35, 0.707);
   box-sizing: border-box;
 }
 
@@ -200,6 +297,60 @@ div a{
   font-size: 0.9em;
   color: black;
 }
+.destinations-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Centers the cards */
+  align-items: stretch; /* Ensures equal height */
+  padding: 20px;
+}
+
+.destination-card {
+  width: 400px;
+  background: rgba(195, 182, 182, 0.663);
+  text-align: center;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column; /* Ensures the content stacks */
+  align-items: center;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(200, 193, 193, 0.389);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 180px;
+  border-radius: 50px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border: 3px solid white;
+  opacity: 0.95; /* Slight transparency */
+  transition: opacity 0.3s ease;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.destination-card h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.destination-card p {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.689);
+  margin: 10px;
+}
+
+.destination-card:hover {
+  transform: scale(1.05);
+}
+.destination-card img:hover {
+  opacity: 1; /* Full brightness on hover */
+}
 .container1 {
   margin: 20px auto;
   background: #ffffff94;
@@ -213,7 +364,6 @@ div a{
   color: #000000;
   font-size: small;
 }
-
 p {
   color: #000000;
 }
